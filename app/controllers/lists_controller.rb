@@ -16,11 +16,18 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
 
     if @list.save
-      redirect_to @list, notice: 'Good job! A new list was successfully created!'
+      redirect_to list_path(@list), notice: 'Good job! A new list was successfully created!'
     else
       render :new
     end
   end
+
+  # def destroy
+  #   @list = List.find(params[:id])
+  #   @list.destroy
+
+  #   redirect_to list_path(@bookmark.list)
+  # end
 
   private
 
