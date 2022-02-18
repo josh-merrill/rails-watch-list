@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+
 }
 
 .card-tags {
@@ -19,7 +20,10 @@
     color: white;
   }
 }
-
+.card-wrapper {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .card-category {
   position: relative;
   background-size: cover;
@@ -27,6 +31,7 @@
   background-position: center;
   height: 450px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: $white;
